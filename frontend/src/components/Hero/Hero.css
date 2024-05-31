@@ -1,0 +1,122 @@
+/* General styles for the hero container */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /* background-color: #f0f0f0; */
+}
+
+.first-hero {
+    flex: 1;
+    text-align: left;
+}
+
+.first-hero h1 {
+    font-size: 36px;
+    line-height: 1.2;
+    /* color: #333; */
+}
+
+.sub-first-hero {
+    margin-top: 20px;
+}
+
+.sub-first-hero button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.first-button {
+    background-color: #ff5733;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+.second-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+.second-hero {
+    flex: 1;
+    text-align: right;
+}
+
+.second-hero img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media queries for larger screens */
+@media screen and (min-width: 1024px) {
+    .hero {
+        padding: 40px 80px;
+    }
+
+    span {
+        background: #121FCF;
+        background: linear-gradient(to right, #121FCF 0%, #C6CF4D 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .first-hero h1 {
+        font-size: 4.5rem;
+    }
+
+    .second-hero img {
+        max-width: 80%;
+    }
+}
+
+/* Media queries for smaller screens */
+@media screen and (max-width: 768px) {
+    .hero {
+        margin-top: 4rem;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    span {
+        background: #121FCF;
+        background: linear-gradient(to right, #121FCF 0%, #C6CF4D 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+
+    .first-hero {
+        margin-bottom: 20px;
+    }
+
+    .first-hero h1 {
+        font-size: 38px;
+    }
+
+    .sub-first-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sub-first-hero button {
+        margin: 10px 0;
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .second-hero {
+        text-align: center;
+    }
+
+    .second-hero img {
+        max-width: 80%;
+    }
+}

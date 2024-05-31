@@ -1,0 +1,14 @@
+.artTag-btn-success {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: not-allowed;
+}
+
+
+.artSection-one {
+    position: relative;
+    margin-bottom: 20px;
+}
+

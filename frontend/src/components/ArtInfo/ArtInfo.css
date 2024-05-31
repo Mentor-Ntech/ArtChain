@@ -1,0 +1,68 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 350px) {
+  .art-info-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    background: url('../../assets/explore.jpeg') no-repeat center center/cover;
+    background-size: cover;
+    
+  }
+  
+  .text-overlay {
+    /* position: absolute; */
+    /* color: white;  */
+  } 
+
+  .ArtInfo {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .ArtInfoLogo img {
+    width: 10rem;
+  }
+
+  
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1030px) {
+  .art-info-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: rgb(4,40,5);
+    background: linear-gradient(90deg, rgba(4,40,5,0.7497373949579832) 31%, rgba(36,109,138,0.9990371148459384) 100%);
+    /* background: url('../../assets/explore.jpeg') no-repeat center center/cover; */
+    background-size: cover; 
+  }
+  
+  .text-overlay {
+    position: absolute;
+    color: white; 
+  }
+
+  .ArtInfo {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .ArtInfoLogo img {
+    width: 30rem;
+  }
+  
+}

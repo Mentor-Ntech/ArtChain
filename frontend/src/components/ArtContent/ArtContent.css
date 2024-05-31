@@ -1,0 +1,112 @@
+.artcontent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center; /* Center content horizontally */
+    margin-top: 8rem;
+    margin-left: 0; /* Reset margin left */
+}
+
+.artcontent-item {
+    position: relative;
+    background: yellow;
+    text-align: center;
+    margin: 0; /* Reset margin for better control with gap */
+}
+
+.artcontent-item h1 {
+    color: black;
+}
+
+.image-container {
+    position: relative;
+    width: 28rem;  /* Adjusted for larger screens */
+    height: 20rem; /* Adjusted for larger screens */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.overlays {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.overlays button {
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.image-container:hover .overlays {
+    opacity: 1;
+}
+
+/* Media Queries */
+@media (min-width: 1400px) {
+    .artcontent {
+        gap: 2rem;  /* Reduced gap for larger screens */
+    }
+    .image-container {
+        width: 24rem;
+        height: 18rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .artcontent {
+        gap: 1.5rem;  /* Slightly reduced gap */
+    }
+    .image-container {
+        width: 24rem;
+        height: 18rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .artcontent {
+        gap: 1rem;  /* Default gap */
+    }
+    .image-container {
+        width: 20rem;
+        height: 15rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .artcontent {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem; /* Increased gap for stacked items */
+    }
+    .image-container {
+        width: 80%;
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .image-container {
+        width: 100%;
+        height: auto;
+    }
+    .overlays button {
+        font-size: 1.5rem;
+    }
+}
