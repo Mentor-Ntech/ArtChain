@@ -7,6 +7,8 @@ import Trade from '../../components/Trade/Trade';
 import CanvasAnimation from '../../components/Canvas/CanvasAnimation';
 import ArtContent from '../../components/ArtContent/ArtContent';
 import Creator from '../../components/Creator/Creator';
+import Newsletter from '../../components/Newsletter/Newsletter';
+import Footer from '../../components/Footer/Footer';
 
 const Home = () => {
   const canvasRef = useRef(null);
@@ -137,6 +139,12 @@ const Home = () => {
         </div>
         <div>
           <ArtContent/>
+        </div>
+        <div>
+          <Newsletter/>
+        </div>
+        <div>
+          <Footer/>
         </div>
       </div>
     </div>

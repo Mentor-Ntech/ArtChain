@@ -34,7 +34,7 @@ const Creator = () => {
                     <div key={art._id} className='creatorSectionDetails'>
                         <div className='creatorSectionDetail'>
                             <div className='sub-creatorSectionDetails'>
-                                <div>
+                                <div className='secDetails'>
                                     <img src={`http://localhost:5000/${art.creatorImage}`} alt={art.creatorName} />
                                     <p>{art.creatorName}</p>
                                 </div>

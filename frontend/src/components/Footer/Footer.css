@@ -1,0 +1,102 @@
+.footerCone {
+    background-color: #444848;
+    height: 60vh;
+    width: 100%;
+    padding: 0 5vw; /* Changed from rem to vw for better responsiveness */
+    box-sizing: border-box; /* Ensure padding is included in total width */
+}
+
+.footerSec {
+    display: flex;
+    flex-direction: row;
+    padding: 4rem;
+    gap: 5vw; /* Changed from px to vw for better responsiveness */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.footSec a, .footThr a {
+    text-decoration: none;
+    color: inherit; /* Inherit the color from the parent element */
+}
+
+.Btn {
+    width: 140px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #77530a, #ffd277, #77530a, #77530a, #ffd277, #77530a);
+    background-size: 250%;
+    background-position: left;
+    color: #ffd277;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-position 1s, transform 0.2s; /* Combined transitions */
+    overflow: hidden;
+}
+
+.Btn::before {
+    position: absolute;
+    content: "SUBSCRIBE";
+    color: #ffd277;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 97%;
+    height: 90%;
+    border-radius: 8px;
+    transition: background-position 1s; /* Combined transitions */
+    background-color: rgba(0, 0, 0, 0.842);
+    background-size: 200%;
+}
+
+.Btn:hover {
+    background-position: right;
+}
+
+.Btn:hover::before {
+    background-position: right;
+}
+
+.Btn:active {
+    transform: scale(0.95);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .footerSec {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        padding: 2rem;
+        gap: 2rem; /* Adjust gap for smaller screens */
+    }
+
+    .Btn {
+        width: 120px; /* Adjust button size for smaller screens */
+        height: 35px;
+    }
+
+    .Btn::before {
+        width: 95%;
+        height: 85%;
+    }
+}
+
+@media (max-width: 480px) {
+    .footerSec {
+        padding: 1rem;
+        gap: 1rem; /* Further reduce gap for very small screens */
+    }
+
+    .Btn {
+        width: 100px; /* Further adjust button size */
+        height: 30px;
+    }
+
+    .Btn::before {
+        font-size: 0.8rem; /* Adjust font size for smaller screens */
+        width: 90%;
+        height: 80%;
+    }
+}
